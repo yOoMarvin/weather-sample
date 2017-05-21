@@ -29,7 +29,7 @@ class WeatherTableViewController: UITableViewController, UISearchBarDelegate {
         searchBar.resignFirstResponder() //hides keyboard
         
         if let locationString = searchBar.text, !locationString.isEmpty {
-            //updateWeatherForLocation
+            updateWeatherForLocation(location: locationString)
         }
     }
     
