@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import CoreLocation
 
 class WeatherTableViewController: UITableViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
     
-    
+    var forecastData = [Weather]()
     
     
 
@@ -34,7 +35,22 @@ class WeatherTableViewController: UITableViewController, UISearchBarDelegate {
     
     
     func updateWeatherForLocation(location: String) {
-        
+        CLGeocoder().geocodeAddressString(location) { (placemarks: [CLPlacemark]?, error: Error?) in
+            if error == nil {
+                if let location = placemarks?.first?.location {
+                    Weather.forecast(withLocation: location.coordinate, completion: { (results: [Weather]?) in
+                        
+                        if let weatherData = results {
+                            self.forecastData = weatherData
+                            
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                        }
+                    })
+                }
+            }
+        }
     }
     
     
