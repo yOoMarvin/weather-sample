@@ -8,19 +8,37 @@
 
 import UIKit
 
-class WeatherTableViewController: UITableViewController {
+class WeatherTableViewController: UITableViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchBar.delegate = self
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder() //hides keyboard
+        
+        if let locationString = searchBar.text, !locationString.isEmpty {
+            //updateWeatherForLocation
+        }
+    }
+    
+    
+    func updateWeatherForLocation(location: String) {
+        
+    }
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
