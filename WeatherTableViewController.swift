@@ -21,6 +21,9 @@ class WeatherTableViewController: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
         
         searchBar.delegate = self
+        
+        //init value
+        updateWeatherForLocation(location: "New York")
 
     }
     
