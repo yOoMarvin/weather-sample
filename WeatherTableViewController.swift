@@ -68,12 +68,20 @@ class WeatherTableViewController: UITableViewController, UISearchBarDelegate {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return forecastData.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return forecastData.count
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let date = Calendar.current.date(byAdding: .day, value: section, to: Date())
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM dd, yyyy"
+        
+        return dateFormatter.string(from: date!)
     }
 
     
