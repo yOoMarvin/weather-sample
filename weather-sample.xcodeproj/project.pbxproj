@@ -12,6 +12,7 @@
 		587F435B1ED1F35D008D1A62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 587F435A1ED1F35D008D1A62 /* Assets.xcassets */; };
 		587F435E1ED1F35D008D1A62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 587F435C1ED1F35D008D1A62 /* LaunchScreen.storyboard */; };
 		587F43661ED1F641008D1A62 /* WeatherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587F43651ED1F641008D1A62 /* WeatherTableViewController.swift */; };
+		587F43681ED1F6C7008D1A62 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587F43671ED1F6C7008D1A62 /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		587F435D1ED1F35D008D1A62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		587F435F1ED1F35D008D1A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		587F43651ED1F641008D1A62 /* WeatherTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherTableViewController.swift; path = ../WeatherTableViewController.swift; sourceTree = "<group>"; };
+		587F43671ED1F6C7008D1A62 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				587F43651ED1F641008D1A62 /* WeatherTableViewController.swift */,
+				587F43671ED1F6C7008D1A62 /* Weather.swift */,
 				587F43531ED1F35D008D1A62 /* AppDelegate.swift */,
 				587F43571ED1F35D008D1A62 /* Main.storyboard */,
 				587F435A1ED1F35D008D1A62 /* Assets.xcassets */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				587F43661ED1F641008D1A62 /* WeatherTableViewController.swift in Sources */,
+				587F43681ED1F6C7008D1A62 /* Weather.swift in Sources */,
 				587F43541ED1F35D008D1A62 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
